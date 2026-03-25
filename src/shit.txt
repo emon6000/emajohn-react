@@ -1,0 +1,28 @@
+import React from 'react';
+import './Shop.css'
+const Shop = (props) => {
+    const { img, name, seller, price, stock, star } = props.product;
+    return (
+        <div className="product-card">
+            <div className="product-image">
+                <img src={img} alt={name} />
+            </div>
+            <div className="product-details">
+                <h4 className="product-name">{name}</h4>
+                <p><small>by: {seller}</small></p>
+                <p className="product-price">${price}</p>
+                <p><small>Only {stock} left in stock - order soon</small></p>
+                
+                <p className="product-rating">Rating: {star} ⭐</p>
+
+                <button 
+                    className="add-to-cart-btn"
+                >
+                    🛒 Add to cart
+                </button>
+            </div>
+        </div>
+    );
+};
+
+export default Shop;
