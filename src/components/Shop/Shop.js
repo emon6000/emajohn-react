@@ -6,7 +6,7 @@ import Cart from '../Cart/Cart.js';
 
 const Shop = () => {
   const first10 = product;
-  const [products, setProducts] = useState(first10);
+  const [products] = useState(first10);
   const [cart,setCart] = useState([]);
   const handleAddProduct = (prod) => {
     console.log('product added',prod);
